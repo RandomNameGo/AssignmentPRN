@@ -42,6 +42,6 @@
         <!-- Nút Login -->
         <Button x:Name="LoginButton" Grid.Row="3" Grid.Column="1" Content="Login" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,20" Click="LoginButton_Click"/>
 
-        <Button x:Name="QuitButton" Grid.Row="3" Grid.Column="2" Content="Quit" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,20"/>
+        <Button x:Name="QuitButton" Grid.Row="3" Grid.Column="2" Content="Quit" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,20" Click="QuitButton_Click"/>
     </Grid>
 </Window>
