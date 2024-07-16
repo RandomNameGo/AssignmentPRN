@@ -1,4 +1,4 @@
-﻿<Window x:Class="GameIven.MainWindow"
+﻿<Window x:Name="ProductMainWindow" x:Class="GameIven.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="220"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="628" AutoGenerateColumns="True" Margin="146,92,0,0" Grid.ColumnSpan="2"/>
+        <Label x:Name="GreetUserLabel" Content="Hello User" Margin="120,21,0,0" RenderTransformOrigin="2.674,0.972" Width="90" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+        <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="143,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="44" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,117,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,175,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="UpdateButton_Copy" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,237,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,297,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="AnUnusuallyLongBar" Content="Long stick" HorizontalAlignment="Left" Height="31" Margin="159,44,0,0" VerticalAlignment="Top" Width="520" Grid.ColumnSpan="2"/>
+        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="45" Margin="10,357,0,0" VerticalAlignment="Top" Width="131"/>
 
     </Grid>
 </Window>
