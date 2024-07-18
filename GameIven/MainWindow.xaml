@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="840" Loaded="ProductMainWindow_Loaded">
+        Title="MainWindow" Height="524" Width="1104" Loaded="ProductMainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -36,8 +36,8 @@
         <Label x:Name="MaxPriceLabel" Content="Max Price:" HorizontalAlignment="Left" Margin="184,35,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <TextBox x:Name="SearchMinPriceTextBox" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="288,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" FontSize="14"/>
         <Label x:Name="MinPriceLabel" Content="Min Price:" HorizontalAlignment="Left" Margin="184,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <ComboBox x:Name="SearchCategoryComboBox" HorizontalAlignment="Left" Margin="672,79,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
-        <Label x:Name="Category_Label" Content="Category:" HorizontalAlignment="Left" Margin="575,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <ComboBox x:Name="SearchSupplierComboBox" HorizontalAlignment="Left" Margin="672,79,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
+        <Label x:Name="SupplierLabel" Content="Supplier:" HorizontalAlignment="Left" Margin="575,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <CheckBox x:Name="SearchInStockCheckBox" Content="Is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="390,135,0,0" VerticalAlignment="Top" Width="352" FontSize="18" FontWeight="Bold" />
 
