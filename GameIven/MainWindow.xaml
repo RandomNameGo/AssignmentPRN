@@ -5,18 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="ProductMainWindow_Loaded">
+        Title="MainWindow" Height="450" Width="840" Loaded="ProductMainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="628" AutoGenerateColumns="True" Margin="146,92,0,0" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="681" AutoGenerateColumns="False" Margin="146,92,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="30" Binding="{Binding ProductId}"/>
+                <DataGridTextColumn Header="Name" Width="195" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Supplier" Width="70" Binding="{Binding Supplier.SupplierName}"/>
+                <DataGridTextColumn Header="Category" Width="70" Binding="{Binding Category.CategoryName}"/>
+                <DataGridTextColumn Header="Price" Width="70" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Quantity" Width="60" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Year Of Manufacture" Width="125" Binding="{Binding YearOfManufacture}"/>
+                <DataGridTextColumn Header="Warranty" Width="60" Binding="{Binding Warranty}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Label x:Name="GreetUserLabel" Content="Hello User" Margin="30,43,0,0" RenderTransformOrigin="2.674,0.972" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
         <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="54,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="44" HorizontalContentAlignment="Center"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,117,0,0" VerticalAlignment="Top" Width="131"/>
         <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,175,0,0" VerticalAlignment="Top" Width="131"/>
         <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,232,0,0" VerticalAlignment="Top" Width="131" Click="DeleteButton_Click"/>
-        <Button x:Name="AnUnusuallyLongBar" Content="Long stick" HorizontalAlignment="Left" Height="31" Margin="146,47,0,0" VerticalAlignment="Top" Width="628"/>
+        <Button x:Name="AnUnusuallyLongBar" Content="Long stick" HorizontalAlignment="Left" Height="31" Margin="146,47,0,0" VerticalAlignment="Top" Width="681"/>
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="45" Margin="10,292,0,0" VerticalAlignment="Top" Width="131"/>
 
     </Grid>
