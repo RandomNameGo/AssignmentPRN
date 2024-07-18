@@ -10,7 +10,20 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="ProductDataGrid" Height="297" VerticalAlignment="Top" AutoGenerateColumns="True" Margin="146,187,26,0"/>
+        <DataGrid x:Name="ProductDataGrid" Height="297" VerticalAlignment="Top" AutoGenerateColumns="False" Margin="146,187,26,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product ID" Width="70" Binding="{Binding ProductId}"/>
+                <DataGridTextColumn Header="Product Name" Width="200" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Supplier Id" Width="70" Binding="{Binding SupplierId}"/>
+                <DataGridTextColumn Header="Category Id" Width="80" Binding="{Binding CategoryId}"/>
+                <DataGridTextColumn Header="Price" Width="170" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Quantity" Width="70" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Manufacture Year" Width="110" Binding="{Binding YearOfManufacture}"/>
+                <DataGridTextColumn Header="Warranty" Width="70" Binding="{Binding Warranty}"/>
+                <DataGridTextColumn Header="Category" Width="100" Binding="{Binding Category}"/>
+                <DataGridTextColumn Header="Supplier" Width="100" Binding="{Binding Supplier}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="110" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="54" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,187,0,0" VerticalAlignment="Top" Width="131"/>
