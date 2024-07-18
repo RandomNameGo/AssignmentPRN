@@ -15,5 +15,9 @@ namespace Services
         {
             return _repo.GetProducts();
         }
+        public void DeleteProduct(Product product)
+        {
+            _repo.Delete(product);
+        }
     }
 }
