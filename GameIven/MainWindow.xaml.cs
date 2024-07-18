@@ -39,6 +39,7 @@ namespace GameIven
         {
             CreateUpdateWindow create = new();
             create.ShowDialog();
+            LoadDataGrid();
         }
 
         private void DeleteButton_Click_1(object sender, RoutedEventArgs e)
