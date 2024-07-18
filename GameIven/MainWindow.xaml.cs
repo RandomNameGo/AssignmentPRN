@@ -35,7 +35,7 @@ namespace GameIven
             LoadDataGrid();
         }
 
-<<<<<<< HEAD
+
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -48,7 +48,6 @@ namespace GameIven
             _productService.DeleteProduct(selected);
             LoadDataGrid();
         }
-=======
->>>>>>> e647f106e7a09c774ef004a31dbf78165545c701
+
     }
 }
