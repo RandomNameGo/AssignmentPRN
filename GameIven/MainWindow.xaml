@@ -15,7 +15,7 @@
         <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="54,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="44" HorizontalContentAlignment="Center"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,117,0,0" VerticalAlignment="Top" Width="131"/>
         <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,175,0,0" VerticalAlignment="Top" Width="131"/>
-        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,232,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,232,0,0" VerticalAlignment="Top" Width="131" Click="DeleteButton_Click"/>
         <Button x:Name="AnUnusuallyLongBar" Content="Long stick" HorizontalAlignment="Left" Height="31" Margin="146,47,0,0" VerticalAlignment="Top" Width="628"/>
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="45" Margin="10,292,0,0" VerticalAlignment="Top" Width="131"/>
 
