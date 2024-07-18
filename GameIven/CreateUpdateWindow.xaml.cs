@@ -31,13 +31,19 @@ namespace GameIven
             if (selectedProduct != null)
             {
                 WindowLabel.Content = "Update Product";
+                ConfirmButton.Content = "Update";
             }
 
             if (selectedProduct == null)
             {
                 WindowLabel.Content = "Create Product";
-
+                ConfirmButton.Content = "Create";
             }
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
