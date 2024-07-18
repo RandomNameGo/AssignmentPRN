@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="CreateUpdateWindow" Height="450" Width="800">
+        Title="CreateUpdateWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="39" Margin="178,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="196"/>
         <Label Content="ID" HorizontalAlignment="Left" Height="41" Margin="22,65,0,0" VerticalAlignment="Top" Width="128" VerticalContentAlignment="Center"/>
-        <Label Content="Create/Update Product" HorizontalAlignment="Left" Height="37" Margin="280,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="WindowLabel" Content="Create/Update Product" HorizontalAlignment="Left" Height="37" Margin="280,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial Black" FontSize="20"/>
         <TextBox HorizontalAlignment="Left" Height="39" Margin="178,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="196"/>
         <Label Content="Name" HorizontalAlignment="Left" Height="41" Margin="22,130,0,0" VerticalAlignment="Top" Width="128" VerticalContentAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="178,207,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="196"/>

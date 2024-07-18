@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repositories.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,24 @@ namespace GameIven
     /// </summary>
     public partial class CreateUpdateWindow : Window
     {
+        public Product selectedProduct { get; set; } = null;
         public CreateUpdateWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (selectedProduct != null)
+            {
+                WindowLabel.Content = "Update Product";
+            }
+
+            if (selectedProduct == null)
+            {
+                WindowLabel.Content = "Create Product";
+
+            }
         }
     }
 }

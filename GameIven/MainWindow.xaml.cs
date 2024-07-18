@@ -49,5 +49,10 @@ namespace GameIven
             LoadDataGrid();
         }
 
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateUpdateWindow create = new();
+            create.ShowDialog();
+        }
     }
 }
