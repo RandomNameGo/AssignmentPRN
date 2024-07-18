@@ -16,7 +16,7 @@ namespace Repositories
         public List<Product> GetProducts()
         {
             _context = new InvenGameDbContext();
-            return _context.Products.Include("Category").Include("Supplier").ToList();
+             return _context.Products.Include("Category").Include("Supplier").ToList();
         }
 
         public void Create(Product product)
