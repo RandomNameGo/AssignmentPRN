@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using Repositories.Entities;
+using Services;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Windows;
@@ -31,6 +32,20 @@ namespace GameIven
         }
         private void ProductMainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            LoadDataGrid();
+        }
+
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            Product selected = ProductDataGrid.SelectedItem as Product;
+            if (selected == null)
+            {
+                MessageBox.Show("Please select product you want to delete", "Select one", MessageBoxButton.OK, MessageBoxImage.Stop);
+                return;
+            }
+            _productService.DeleteProduct(selected);
             LoadDataGrid();
         }
 
