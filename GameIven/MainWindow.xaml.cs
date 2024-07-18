@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Services;
+using System.Security.RightsManagement;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,10 +18,20 @@ namespace GameIven
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ProductService _productService = new();
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void LoadDataGrid()
+        {
+            ProductDataGrid.ItemsSource = null;
+            ProductDataGrid.ItemsSource = _productService.GetAllProducts();
+        }
+        private void ProductMainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadDataGrid();
+        }
     }
 }
