@@ -10,25 +10,23 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="ProductDataGrid" Height="297" VerticalAlignment="Top" AutoGenerateColumns="False" Margin="146,187,26,0">
+        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="340" VerticalAlignment="Top" Width="680" AutoGenerateColumns="False" Margin="150,187,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Product ID" Width="70" Binding="{Binding ProductId}"/>
-                <DataGridTextColumn Header="Product Name" Width="200" Binding="{Binding ProductName}"/>
-                <DataGridTextColumn Header="Supplier Id" Width="70" Binding="{Binding SupplierId}"/>
-                <DataGridTextColumn Header="Category Id" Width="80" Binding="{Binding CategoryId}"/>
-                <DataGridTextColumn Header="Price" Width="170" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Quantity" Width="70" Binding="{Binding Quantity}"/>
-                <DataGridTextColumn Header="Manufacture Year" Width="110" Binding="{Binding YearOfManufacture}"/>
-                <DataGridTextColumn Header="Warranty" Width="70" Binding="{Binding Warranty}"/>
-                <DataGridTextColumn Header="Category" Width="100" Binding="{Binding Category}"/>
-                <DataGridTextColumn Header="Supplier" Width="100" Binding="{Binding Supplier}"/>
+                <DataGridTextColumn Header="Id" Width="30" Binding="{Binding ProductId}"/>
+                <DataGridTextColumn Header="Name" Width="195" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Supplier" Width="70" Binding="{Binding Supplier.SupplierName}"/>
+                <DataGridTextColumn Header="Category" Width="70" Binding="{Binding Category.CategoryName}"/>
+                <DataGridTextColumn Header="Price" Width="70" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Quantity" Width="60" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Year Of Manufacture" Width="125" Binding="{Binding YearOfManufacture}"/>
+                <DataGridTextColumn Header="Warranty" Width="60" Binding="{Binding Warranty}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="110" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="54" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,187,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,187,0,0" VerticalAlignment="Top" Width="131" Click="CreateButton_Click"/>
         <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,245,0,0" VerticalAlignment="Top" Width="131"/>
-        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,302,0,0" VerticalAlignment="Top" Width="131"/>
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,302,0,0" VerticalAlignment="Top" Width="131" Click="DeleteButton_Click_1"/>
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="45" Margin="10,362,0,0" VerticalAlignment="Top" Width="131"/>
         <TextBox x:Name="SearchNameTextBox" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="672,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="406" FontSize="14" RenderTransformOrigin="0.631,-0.845"/>
         <Label x:Name="ProductNameLabel" Content="Product Name:" HorizontalAlignment="Left" Margin="530,35,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>

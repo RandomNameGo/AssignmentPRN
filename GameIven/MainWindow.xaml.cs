@@ -35,10 +35,15 @@ namespace GameIven
             LoadDataGrid();
         }
 
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
+            CreateUpdateWindow create = new();
+            create.ShowDialog();
+            LoadDataGrid();
+        }
 
+        private void DeleteButton_Click_1(object sender, RoutedEventArgs e)
+        {
             Product selected = ProductDataGrid.SelectedItem as Product;
             if (selected == null)
             {
@@ -48,6 +53,5 @@ namespace GameIven
             _productService.DeleteProduct(selected);
             LoadDataGrid();
         }
-
     }
 }
