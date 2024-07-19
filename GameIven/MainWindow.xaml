@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="340" VerticalAlignment="Top" Width="680" AutoGenerateColumns="False" Margin="150,187,0,0">
+        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="928" AutoGenerateColumns="False" Margin="150,187,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="30" Binding="{Binding ProductId}"/>
                 <DataGridTextColumn Header="Name" Width="195" Binding="{Binding ProductName}"/>
@@ -36,8 +36,9 @@
         <Label x:Name="MinPriceLabel" Content="Min Price:" HorizontalAlignment="Left" Margin="184,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <ComboBox x:Name="SearchSupplierComboBox" HorizontalAlignment="Left" Margin="672,79,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
         <Label x:Name="SupplierLabel" Content="Supplier:" HorizontalAlignment="Left" Margin="575,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <CheckBox x:Name="SearchInStockCheckBox" Content="Is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="390,135,0,0" VerticalAlignment="Top" Width="352" FontSize="18" FontWeight="Bold" />
+        <CheckBox x:Name="SearchInStockCheckBox" Content="Check is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="340,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="SearchButton_Click"/>
+        <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Height="36" Margin="552,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="ResetButton_Click"/>
 
     </Grid>
 </Window>
