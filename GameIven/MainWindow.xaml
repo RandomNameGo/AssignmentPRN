@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="MainWindow" Height="524" Width="1104" Loaded="ProductMainWindow_Loaded">
+        Title="MainWindow" Height="590" Width="1104" Loaded="ProductMainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -39,6 +39,9 @@
         <CheckBox x:Name="SearchInStockCheckBox" Content="Check is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="340,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="SearchButton_Click"/>
         <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Height="36" Margin="552,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="ResetButton_Click"/>
+        <TextBox x:Name="FileNameTextBox" HorizontalAlignment="Left" Margin="150,521,0,0" TextWrapping="Wrap" Text="File" VerticalAlignment="Top" Width="464" Height="33" TextAlignment="Center" FontSize="14"/>
+        <Button x:Name="SelectFileButton" Content="...." HorizontalAlignment="Left" Margin="627,521,0,0" VerticalAlignment="Top" Height="33" Width="100" Click="SelectFileButton_Click" />
+        <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Margin="742,521,0,0" VerticalAlignment="Top" Height="33" Width="100" Click="ImportButton_Click"/>
 
     </Grid>
 </Window>

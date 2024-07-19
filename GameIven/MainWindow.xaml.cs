@@ -1,4 +1,5 @@
-﻿using Repositories.Entities;
+﻿using Microsoft.Win32;
+using Repositories.Entities;
 using Services;
 using System.Diagnostics.Eventing.Reader;
 using System.Security.RightsManagement;
@@ -22,6 +23,7 @@ namespace GameIven
     {
         private ProductService _productService = new();
         private SupplierService _supplierService = new();
+        private string _excelFilePath;
         public MainWindow()
         {
             InitializeComponent();
@@ -107,6 +109,34 @@ namespace GameIven
             SearchNameTextBox.Text = "";
             SearchSupplierComboBox.SelectedIndex = -1;
             SearchInStockCheckBox.IsChecked = false;
+        }
+
+        private void SelectFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xls;*.xlsx"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _excelFilePath = openFileDialog.FileName;
+                FileNameTextBox.Text = _excelFilePath;
+            }
+
+        }
+
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(_excelFilePath))
+            {
+                MessageBox.Show("Please select an Excel file first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            _productService.ImportProducts(_excelFilePath);
+            MessageBox.Show("Import completed successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            LoadDataGrid(); 
         }
     }
 }

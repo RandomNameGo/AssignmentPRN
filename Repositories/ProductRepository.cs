@@ -39,5 +39,10 @@ namespace Repositories
             _context.Products.Remove(product);
             _context.SaveChanges();
         }
+
+        public Product GetByName(string name)
+        {
+            return _context.Products.FirstOrDefault(p => p.ProductName == name);
+        }
     }
 }
