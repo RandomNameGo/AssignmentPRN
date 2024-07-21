@@ -24,6 +24,8 @@ namespace GameIven
         private ProductService _productService = new();
         private SupplierService _supplierService = new();
         private string _excelFilePath;
+        public UserAccount UserAccount { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +39,15 @@ namespace GameIven
         private void ProductMainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             LoadDataGrid();
-
+            GreetUserLabel.Content = "Hello " + UserAccount.Name;
+            if(UserAccount.Role == 1)
+            {
+                UserRoleLabel.Content = "Admin";
+            }
+            else
+            {
+                UserRoleLabel.Content = "Staff";
+            }
             SearchSupplierComboBox.ItemsSource = _supplierService.GetSuppliers();
             SearchSupplierComboBox.DisplayMemberPath = "SupplierName";
             SearchSupplierComboBox.SelectedValuePath = "SupplierId";

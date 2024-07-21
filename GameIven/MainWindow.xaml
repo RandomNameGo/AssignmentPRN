@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="MainWindow" Height="590" Width="1104" Loaded="ProductMainWindow_Loaded">
+        Title="MainWindow" Height="610" Width="1104" Loaded="ProductMainWindow_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -22,8 +22,8 @@
                 <DataGridTextColumn Header="Warranty" Width="60" Binding="{Binding Warranty}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="110" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
-        <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="54" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="121" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="64" HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,187,0,0" VerticalAlignment="Top" Width="131" Click="CreateButton_Click"/>
         <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,245,0,0" VerticalAlignment="Top" Width="131"/>
         <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,302,0,0" VerticalAlignment="Top" Width="131" Click="DeleteButton_Click_1"/>

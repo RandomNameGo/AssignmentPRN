@@ -42,6 +42,7 @@ namespace GameIven
                 return;
             }
             MainWindow mainWindow = new MainWindow();
+            mainWindow.UserAccount = user;
             mainWindow.Show();
             this.Close();
         }
