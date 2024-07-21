@@ -57,7 +57,7 @@ namespace GameIven
                 ProductNameTextBox.Text = selectedProduct.ProductName.ToString();
                 ProductPriceTextBox.Text = selectedProduct.Price.ToString();
                 ProductQuantityTextBox.Text = selectedProduct.Quantity.ToString();
-                ProductWarrantyTextBox.Text = selectedProduct.Warranty.ToString();
+                ProductWarrantyTextBox.Text = selectedProduct.Warranty.ToString() ?? "";
                 ProductYOMTextBox.Text = selectedProduct.YearOfManufacture.ToString();
                 ProductSupplierComboBox.SelectedValue = selectedProduct.SupplierId.ToString();
                 ProductCategoryComboBox.SelectedValue = selectedProduct.CategoryId.ToString();
