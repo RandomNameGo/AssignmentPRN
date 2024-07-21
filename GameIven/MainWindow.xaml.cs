@@ -53,5 +53,19 @@ namespace GameIven
             _productService.DeleteProduct(selected);
             LoadDataGrid();
         }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Product selected = ProductDataGrid.SelectedValue as Product;
+            if (selected == null)
+            {
+                MessageBox.Show("Please select product you want to update", "Select one", MessageBoxButton.OK, MessageBoxImage.Stop);
+                return;
+            }
+            CreateUpdateWindow update = new();
+            update.selectedProduct = selected;
+            update.ShowDialog();
+            LoadDataGrid();
+        }
     }
 }

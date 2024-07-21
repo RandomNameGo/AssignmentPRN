@@ -20,6 +20,11 @@ namespace Services
         {
             _repo.Create(product);
         }
+
+        public void UpdateProduct(Product product)
+        {
+            _repo.Update(product);
+        }
         public void DeleteProduct(Product product)
         {
             _repo.Delete(product);
