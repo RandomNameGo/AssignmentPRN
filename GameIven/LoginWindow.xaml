@@ -7,13 +7,6 @@
         mc:Ignorable="d"
         Title="Login Window - Inventory Management" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Honeydew">
     <Grid>
-        <Rectangle Fill="AliceBlue" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="229" Margin="116,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="608" Grid.RowSpan="4"/>
-        <Image Source="Switch2.png" Width="210" Height="183" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="100,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Image Source="Vita2.png" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,13,0,0" Grid.Column="3" Grid.Row="4"/>
-        <Image Source="Switch3.png" Width="200" Height="190" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-36,40,0,0" Grid.RowSpan="2" Grid.Row="3"/>
-        <Image Source="nintendo.png" Width="136" Height="149" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,25,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <Image Source="sony.png" Width="156" Height="124" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="129,19,0,0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2"/>
-
         <!-- Định nghĩa các RowDefinitions -->
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
@@ -35,6 +28,14 @@
             <!-- Cột 3 -->
         </Grid.ColumnDefinitions>
 
+        <!-- Hình ảnh và các phần tử trang trí -->
+        <Rectangle Fill="AliceBlue" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="229" Margin="116,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="608" Grid.RowSpan="4"/>
+        <Image Source="Switch2.png" Width="210" Height="183" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="100,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Image Source="Vita2.png" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,13,0,0" Grid.Column="3" Grid.Row="4"/>
+        <Image Source="Switch3.png" Width="200" Height="190" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-36,40,0,0" Grid.RowSpan="2" Grid.Row="3"/>
+        <Image Source="nintendo.png" Width="136" Height="149" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,25,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Image Source="sony.png" Width="156" Height="124" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="129,19,0,0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2"/>
+
         <!-- Dòng Email -->
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:" VerticalAlignment="Center" Margin="164,0,176,0" RenderTransformOrigin="0.992,0.53" Grid.ColumnSpan="2"/>
         <TextBox Style="{StaticResource LoginTxtBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" x:Name="EmailTextBox" Height="30" VerticalAlignment="Center" Margin="50,0,170,0"/>
@@ -45,8 +46,9 @@
 
         <!-- Nút Login -->
         <Button Style="{StaticResource LoginBtn}" x:Name="LoginButton" Grid.Row="3" Grid.Column="1" Content="Login" Width="100" Height="30" HorizontalAlignment="Left" Margin="65,10,0,39" Click="LoginButton_Click" RenderTransformOrigin="0.27,-0.539"/>
-
         <Button Style="{StaticResource LoginBtn}" x:Name="QuitButton" Grid.Row="3" Grid.Column="2" Content="Quit" Width="100" Height="30" HorizontalAlignment="Left" Margin="74,10,0,39" Click="QuitButton_Click"/>
+
+        <!-- Hình ảnh và các phần tử trang trí thêm -->
         <Image Source="/meo.png" Width="136" Height="149" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,14,0,0" Grid.Row="2" Grid.Column="3" Grid.RowSpan="3"/>
         <Image Source="/ball.png" Width="104" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Grid.RowSpan="2"/>
     </Grid>
