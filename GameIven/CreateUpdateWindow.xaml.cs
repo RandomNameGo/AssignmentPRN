@@ -100,6 +100,11 @@ namespace GameIven
                 MessageBox.Show("Quantity must be an integer! ", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            if(!int.TryParse(ProductYOMTextBox.Text, out _))
+            {
+                MessageBox.Show("Year must be a number! ", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             if (int.Parse(ProductYOMTextBox.Text) > DateTime.Now.Year)
             {
                 MessageBox.Show("Invalid year! ", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Error);
