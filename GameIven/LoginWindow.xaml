@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Login Window - Inventory Management" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Honeydew">
     <Grid>
+        <Rectangle Fill="AliceBlue" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="229" Margin="116,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="608" Grid.RowSpan="4"/>
+        <Image Source="Switch2.png" Width="210" Height="183" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="100,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Image Source="Vita2.png" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,13,0,0" Grid.Column="3" Grid.Row="4"/>
+        <Image Source="Switch3.png" Width="200" Height="190" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-36,40,0,0" Grid.RowSpan="2" Grid.Row="3"/>
+        <Image Source="nintendo.png" Width="136" Height="149" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,25,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Image Source="sony.png" Width="156" Height="124" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="129,19,0,0" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2"/>
+
         <!-- Định nghĩa các RowDefinitions -->
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
@@ -28,20 +35,19 @@
             <!-- Cột 3 -->
         </Grid.ColumnDefinitions>
 
-        <!-- Tiêu đề Login -->
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Login" FontSize="26" HorizontalAlignment="Left" Margin="168,40,0,0" Grid.Column="1"/>
-
         <!-- Dòng Email -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:" VerticalAlignment="Center" Margin="120,0,20,0"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="EmailTextBox" Height="30" VerticalAlignment="Center" Margin="10,0,10,0"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Email:" VerticalAlignment="Center" Margin="164,0,176,0" RenderTransformOrigin="0.992,0.53" Grid.ColumnSpan="2"/>
+        <TextBox Style="{StaticResource LoginTxtBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" x:Name="EmailTextBox" Height="30" VerticalAlignment="Center" Margin="50,0,170,0"/>
 
         <!-- Dòng Password -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Password:" VerticalAlignment="Center" Margin="120,0,20,0"/>
-        <PasswordBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="PasswordPasswordBox" Height="30" VerticalAlignment="Center" Margin="10,0,10,0"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Password:" VerticalAlignment="Center" Margin="150,0,163,0" Grid.ColumnSpan="2" Height="30"/>
+        <PasswordBox Style="{StaticResource PassTxtBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" x:Name="PasswordPasswordBox" Height="30" VerticalAlignment="Center" Margin="50,0,170,0"/>
 
         <!-- Nút Login -->
-        <Button x:Name="LoginButton" Grid.Row="3" Grid.Column="1" Content="Login" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,20" Click="LoginButton_Click"/>
+        <Button Style="{StaticResource LoginBtn}" x:Name="LoginButton" Grid.Row="3" Grid.Column="1" Content="Login" Width="100" Height="30" HorizontalAlignment="Left" Margin="65,10,0,39" Click="LoginButton_Click" RenderTransformOrigin="0.27,-0.539"/>
 
-        <Button x:Name="QuitButton" Grid.Row="3" Grid.Column="2" Content="Quit" Width="100" Height="30" HorizontalAlignment="Center" Margin="0,20,0,20" Click="QuitButton_Click"/>
+        <Button Style="{StaticResource LoginBtn}" x:Name="QuitButton" Grid.Row="3" Grid.Column="2" Content="Quit" Width="100" Height="30" HorizontalAlignment="Left" Margin="74,10,0,39" Click="QuitButton_Click"/>
+        <Image Source="/meo.png" Width="136" Height="149" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,14,0,0" Grid.Row="2" Grid.Column="3" Grid.RowSpan="3"/>
+        <Image Source="/ball.png" Width="104" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>

@@ -4,6 +4,70 @@
              xmlns:local="clr-namespace:GameIven"
              StartupUri="LoginWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="131"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Background" Value="#2D89EF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+     
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+        <Style x:Key="LoginBtn" TargetType="Button">
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="131"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+   <Style x:Key="LoginLabel" TargetType="Label">
+       <Setter Property="FontSize" Value="14"/>
+       <Setter Property="Foreground" Value="#004D40"/>
+       <Setter Property="FontFamily" Value="Verdana"/>
+       <Setter Property="Margin" Value="0,0,0,10"/>
+   </Style>
+
+        <Style x:Key="LoginTxtBox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#E0F7FA"/>
+            <Setter Property="Foreground" Value="#004D40"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+        </Style>
+        <Style x:Key="PassTxtBox" TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#E0F7FA"/>
+            <Setter Property="Foreground" Value="#004D40"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+        </Style>
+
     </Application.Resources>
 </Application>
