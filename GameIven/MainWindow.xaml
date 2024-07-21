@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameIven"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="MainWindow" Height="550" Width="840" Loaded="ProductMainWindow_Loaded" WindowStartupLocation="CenterScreen">
+=======
+        Title="MainWindow" Height="610" Width="1104" Loaded="ProductMainWindow_Loaded" WindowStartupLocation="CenterScreen">
+>>>>>>> da61ffb21855b4ddd3f0428f79ab716bfc88c6a3
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="340" VerticalAlignment="Top" Width="680" AutoGenerateColumns="False" Margin="150,187,0,0">
+        <DataGrid x:Name="ProductDataGrid" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="928" AutoGenerateColumns="False" Margin="150,187,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="30" Binding="{Binding ProductId}"/>
                 <DataGridTextColumn Header="Name" Width="195" Binding="{Binding ProductName}"/>
@@ -22,8 +26,8 @@
                 <DataGridTextColumn Header="Warranty" Width="60" Binding="{Binding Warranty}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="110" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
-        <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="54" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="GreetUserLabel" Content="Hello User" Margin="20,18,0,0" RenderTransformOrigin="2.674,0.972" Width="121" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="UserRoleLabel" Content="Role " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.674,0.972" Width="64" HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold"/>
         <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Height="45" Margin="10,187,0,0" VerticalAlignment="Top" Width="131" Click="CreateButton_Click"/>
         <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Height="45" Margin="10,245,0,0" VerticalAlignment="Top" Width="131" Click="UpdateButton_Click"/>
         <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Height="45" Margin="10,302,0,0" VerticalAlignment="Top" Width="131" Click="DeleteButton_Click_1"/>
@@ -34,10 +38,14 @@
         <Label x:Name="MaxPriceLabel" Content="Max Price:" HorizontalAlignment="Left" Margin="184,35,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <TextBox x:Name="SearchMinPriceTextBox" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="288,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" FontSize="14"/>
         <Label x:Name="MinPriceLabel" Content="Min Price:" HorizontalAlignment="Left" Margin="184,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <ComboBox x:Name="SearchCategoryComboBox" HorizontalAlignment="Left" Margin="672,79,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
-        <Label x:Name="Category_Label" Content="Category:" HorizontalAlignment="Left" Margin="575,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <CheckBox x:Name="SearchInStockCheckBox" Content="Is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="390,135,0,0" VerticalAlignment="Top" Width="352" FontSize="18" FontWeight="Bold" />
+        <ComboBox x:Name="SearchSupplierComboBox" HorizontalAlignment="Left" Margin="672,79,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
+        <Label x:Name="SupplierLabel" Content="Supplier:" HorizontalAlignment="Left" Margin="575,78,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <CheckBox x:Name="SearchInStockCheckBox" Content="Check is in stock" HorizontalAlignment="Left" Margin="886,85,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Height="36" Margin="340,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="SearchButton_Click"/>
+        <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Height="36" Margin="552,132,0,0" VerticalAlignment="Top" Width="172" FontSize="18" FontWeight="Bold" Click="ResetButton_Click"/>
+        <TextBox x:Name="FileNameTextBox" HorizontalAlignment="Left" Margin="150,521,0,0" TextWrapping="Wrap" Text="File" VerticalAlignment="Top" Width="464" Height="33" TextAlignment="Center" FontSize="14"/>
+        <Button x:Name="SelectFileButton" Content="...." HorizontalAlignment="Left" Margin="627,521,0,0" VerticalAlignment="Top" Height="33" Width="100" Click="SelectFileButton_Click" />
+        <Button x:Name="ImportButton" Content="Import" HorizontalAlignment="Left" Margin="742,521,0,0" VerticalAlignment="Top" Height="33" Width="100" Click="ImportButton_Click"/>
 
     </Grid>
 </Window>

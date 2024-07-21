@@ -1,5 +1,7 @@
-﻿using Repositories.Entities;
+﻿using Microsoft.Win32;
+using Repositories.Entities;
 using Services;
+using System.Diagnostics.Eventing.Reader;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Windows;
@@ -20,6 +22,10 @@ namespace GameIven
     public partial class MainWindow : Window
     {
         private ProductService _productService = new();
+        private SupplierService _supplierService = new();
+        private string _excelFilePath;
+        public UserAccount UserAccount { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +39,18 @@ namespace GameIven
         private void ProductMainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             LoadDataGrid();
+            GreetUserLabel.Content = "Hello " + UserAccount.Name;
+            if(UserAccount.Role == 1)
+            {
+                UserRoleLabel.Content = "Admin";
+            }
+            else
+            {
+                UserRoleLabel.Content = "Staff";
+            }
+            SearchSupplierComboBox.ItemsSource = _supplierService.GetSuppliers();
+            SearchSupplierComboBox.DisplayMemberPath = "SupplierName";
+            SearchSupplierComboBox.SelectedValuePath = "SupplierId";
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
@@ -54,6 +72,7 @@ namespace GameIven
             LoadDataGrid();
         }
 
+<<<<<<< HEAD
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             Product selected = ProductDataGrid.SelectedValue as Product;
@@ -66,6 +85,83 @@ namespace GameIven
             update.selectedProduct = selected;
             update.ShowDialog();
             LoadDataGrid();
+=======
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            int? maxPrice = null;
+            int? minPrice = null;
+            int? supplierId = null;
+            if (!string.IsNullOrEmpty(SearchMaxPriceTextBox.Text))
+            {
+                try
+                {
+                    maxPrice = int.Parse(SearchMaxPriceTextBox.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Max price must be a number!", "Format Error", MessageBoxButton.OK);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(SearchMinPriceTextBox.Text))
+            {
+                try
+                {
+                    minPrice = int.Parse(SearchMinPriceTextBox.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Max price must be a number!", "Format Error", MessageBoxButton.OK);
+                }
+                
+            }
+            string productName = SearchNameTextBox.Text;
+            if(SearchSupplierComboBox.SelectedItem != null)
+            {
+                supplierId = int.Parse(SearchSupplierComboBox.SelectedValue.ToString());
+            }
+            bool checkIsInStock = SearchInStockCheckBox.IsChecked ?? false;
+            List<Product> products = _productService.SearchProduct(productName, supplierId, maxPrice, minPrice, checkIsInStock);
+            ProductDataGrid.ItemsSource = null;
+            ProductDataGrid.ItemsSource = products;
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchMaxPriceTextBox.Text = "";
+            SearchMinPriceTextBox.Text = "";
+            SearchNameTextBox.Text = "";
+            SearchSupplierComboBox.SelectedIndex = -1;
+            SearchInStockCheckBox.IsChecked = false;
+        }
+
+        private void SelectFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xls;*.xlsx"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _excelFilePath = openFileDialog.FileName;
+                FileNameTextBox.Text = _excelFilePath;
+            }
+
+        }
+
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(_excelFilePath))
+            {
+                MessageBox.Show("Please select an Excel file first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            _productService.ImportProducts(_excelFilePath);
+            MessageBox.Show("Import completed successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            LoadDataGrid(); 
+>>>>>>> da61ffb21855b4ddd3f0428f79ab716bfc88c6a3
         }
     }
 }
