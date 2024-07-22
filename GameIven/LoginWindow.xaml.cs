@@ -38,7 +38,7 @@ namespace GameIven
             UserAccount user = _userAccountService.Authenticate(email, password);
             if (user == null)
             {
-                MessageBox.Show("Nani? Who tf are you??", "Invalid credential", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Ivalid name or password?", "Invalid credential", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             MainWindow mainWindow = new MainWindow();

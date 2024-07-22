@@ -33,7 +33,7 @@ namespace Services
         public List<Product> SearchProduct(String productName, int? supplierId, int? maxPrice, int? minPrice, Boolean checkIsInStock)
         {
             List<Product> productList = _repo.GetProducts();
-            productList = productList.Where(x => x.ProductName.Contains(productName)).ToList();
+            productList = productList.Where(x => x.ProductName.ToLower().Contains(productName.ToLower())).ToList();
             if (supplierId != null)
             {
                 productList = productList.Where(x => x.SupplierId.Equals(supplierId)).ToList();
@@ -57,9 +57,11 @@ namespace Services
         {
             FileInfo fileInfo = new FileInfo(excelFilePath);
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage package = null;
 
-            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            try
             {
+                package = new ExcelPackage(fileInfo);
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                 int rowCount = worksheet.Dimension.Rows;
 
@@ -96,7 +98,14 @@ namespace Services
                     }
                 }
             }
+            finally
+            {
+                if (package != null)
+                {
+                    package.Dispose();
+                }
 
+            }    
         }
     }
 }

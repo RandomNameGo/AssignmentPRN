@@ -57,7 +57,14 @@ namespace GameIven
                 ProductNameTextBox.Text = selectedProduct.ProductName.ToString();
                 ProductPriceTextBox.Text = selectedProduct.Price.ToString();
                 ProductQuantityTextBox.Text = selectedProduct.Quantity.ToString();
-                ProductWarrantyTextBox.Text = selectedProduct.Warranty.ToString() ?? "";
+                if(selectedProduct.Warranty == null)
+                {
+                    ProductWarrantyTextBox.Text = string.Empty;
+                }
+                else
+                {
+                    ProductWarrantyTextBox.Text = selectedProduct.Warranty.ToString();
+                }
                 ProductYOMTextBox.Text = selectedProduct.YearOfManufacture.ToString();
                 ProductSupplierComboBox.SelectedValue = selectedProduct.SupplierId.ToString();
                 ProductCategoryComboBox.SelectedValue = selectedProduct.CategoryId.ToString();
@@ -67,8 +74,6 @@ namespace GameIven
             {
                 WindowLabel.Content = "Create Product";
                 ConfirmButton.Content = "Create";
-
-
             }
         }
 
@@ -82,7 +87,6 @@ namespace GameIven
             if (string.IsNullOrEmpty(ProductNameTextBox.Text) ||
                 string.IsNullOrEmpty(ProductPriceTextBox.Text) ||
                 string.IsNullOrEmpty(ProductQuantityTextBox.Text) ||
-                string.IsNullOrEmpty(ProductWarrantyTextBox.Text) ||
                 string.IsNullOrEmpty(ProductYOMTextBox.Text) ||
                 string.IsNullOrEmpty(ProductSupplierComboBox.Text) ||
                 string.IsNullOrEmpty(ProductCategoryComboBox.Text))
@@ -133,12 +137,12 @@ namespace GameIven
             if (selectedProduct == null)
             {
                 _service.CreateProduct(p);
-                MessageBox.Show("Create");
+          
             }
             else
             {
                 _service.UpdateProduct(p);
-                MessageBox.Show("Update");
+         
             }
             this.Close();
         }
